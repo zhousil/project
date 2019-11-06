@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐购商城</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/myOrder.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/myOrder.js"></script>
+    <script src="js/remodal.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="wrapper clearfix">
+            <img src="images/imgNew/会员中心.png" class="fl">
+            <span class="fl">legochina.cn</span>
+            <div class="fr">欢迎光临<a href="index.html" class="fontff6">乐购</a> ，请&nbsp;<a href="login.html"
+                    class="fonte6">登录</a>\<a href="register.html" class="fontff6">注册</a></div>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div id="nav">
+        <div class="wrapper clearfix">
+            <p class="fl font24">乐我所乐，我的VIP!</p>
+            <ul class="fr clearfix font20">
+                <li class="fl"><a href="#">首页</a></li>
+                <li class="fl bgcff"><a href="#" class="colfff">我的订单</a></li>
+                <li class="fl"><a href="#">会员特权</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体部分 -->
+    <div id="main">
+        <div class="wrapper clearfix">
+            <!-- 左侧 -->
+            <div class="left fl">
+                <div class="name clearfix ml16 mb52">
+                    <img src="images/part1.png" alt="" class="fl">
+                    <div class="level fl">
+                        <p class="font16 col4d">洲袋子 V5</p>
+                        <a href="#" class="font12 col80">查看你的特权</a>
+                    </div>
+                </div>
+                <div class="ticket ml16 mb52">
+                    <div class="mb36">
+                        <img src="images/icon_u_worth_1.png" alt="">
+                        <span class="col333">我的乐豆：</span>
+                        <span class="col333">--</span>
+                    </div>
+                    <div>
+                        <img src="images/icon_u_worth_2.png" alt="">
+                        <span class="col333">我的优惠券：</span>
+                        <span class="col333">--</span>
+                    </div>
+                </div>
+                <div class="bag">
+                    <img src="images/giftbag.png" alt="">
+                    <p>10个礼包（未领取）</p>
+                </div>
+                <div class="special mb18">
+                    <img src="images/special.png" alt="">
+                    <div class="ml16">
+                        <img src="images/1.png" alt="">
+                        <img src="images/2.png" alt="">
+                        <img src="images/3.png" alt=""><br>
+                        <img src="images/4.png" alt="">
+                        <img src="images/5.png" alt="">
+                    </div>
+                </div>
+                <div class="tac">
+                    <img src="images/img1.png" alt="">
+                    <img src="images/img2.png" alt="">
+                    <img src="images/img3.png" alt="">
+                    <img src="images/img4.png" alt="">
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="right fr">
+                <div class="listTitle clearfix">
+                    <p class="fl fontff6 font24">订单列表</p>
+                    <ul class=" clearfix fl">
+                        <li class="fl tab1"><a href="#" class="col80">待付款 (<span class="fontff6">0</span>)</a></li>
+                        <li class="fl tab2"><a href="#" class="col80">待收货 (<span class="fontff6">0</span>)</a></li>
+                        <li class="fl tab3"><a href="#" class="col80">待评价 (<span class="fontff6">0</span>)</a></li>
+                    </ul>
+                </div>
+                <div class="allOrder mb18">
+                    <p class="fontff6 font20">全部订单 (6)</p>
+                    <div class="listHead bgcf2 font18">
+                        <input type="checkbox" class="allCheck" checked>
+                        <span class="allChoose col80">全选</span>
+                        <span class="product col80 tac">商品</span>
+                        <span class="single col80">单价</span>
+                        <span class="status col80 tac">状态</span>
+                    </div>
+                </div>
+                <div class="orderList">
+                    <ul>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 fontff6">待付款</span>
+                            <div class="commend">
+                                <a href="#" class="col4d font16 mr28">评价</a>
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 fontff6">交易成功</span>
+                            <div class="commend">
+                                <a href="#" class="fontff6 font16 mr28">评价</a>
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 col4d">交易关闭</span>
+                            <div class="commend">
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 fontff6">交易关闭</span>
+                            <div class="commend">
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 fontff6">交易成功</span>
+                            <div class="commend">
+                                <a href="#" class="fontff6 font16 mr28">评价</a>
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <input type="checkbox" class="fl" checked>
+                            <div class="fl mt18">
+                                <img src="images/23353342-1_l.jpg" alt="">
+                            </div>
+                            <span class="world font16 col4d">从你的全世界路过</span>
+                            <span class="price font16 col4d">41.00</span>
+                            <span class="pay font16 fontff6">交易成功</span>
+                            <div class="commend">
+                                <a href="#" class="fontff6 font16 mr28">已评价</a>
+                                <a href="#" class="singleDelete fontff6 font16">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="totalPrice clearfix">
+                        <div class="content fl">
+                            <input type="checkbox" class="allCheck" checked>
+                            <a href="#">全选</a>
+                            <a class="delete" href="#">删除选中订单商品</a>
+                            <span>已选择<span class="proNum fontff6 font22">&nbsp;&nbsp;0&nbsp;&nbsp;</span>件商品</span>
+                            <span class="allPrice font20">总价<span class="price fontff6">00.00</span></span>
+                        </div>
+                        <a href="#modal">
+                            <button class="fr font26">去结算</button>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 长广告图 -->
+    <div id="adver" class="tac">
+        <img src="images/banner3.png" alt="">
+    </div>
+    <!-- 页脚部分 -->
+    <div id="footer">
+        <div class="top">
+            <img src="images/222_11.png" alt="">
+            <img src="images/222_13(1).png" alt="">
+            <img src="images/222_15.png" alt="">
+            <img src="images/222_17.png" alt="">
+        </div>
+        <div class="bottom">
+            <div class="smallTop clearfix">
+                <div>
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">发票制度</a></li>
+                        <li><a href="#">账户管理</a></li>
+                        <li><a href="#">会员优惠</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>支付方式</h4>
+                    <ul>
+                        <li><a href="#">货到付款</a></li>
+                        <li><a href="#">网上支付</a></li>
+                        <li><a href="#">礼品卡支付</a></li>
+                        <li><a href="#">银行转账</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>订单服务</h4>
+                    <ul>
+                        <li><a href="#">订单配送查询</a></li>
+                        <li><a href="#">订单状态说明</a></li>
+                        <li><a href="#">自助取消订单</a></li>
+                        <li><a href="#">自助修改订单</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>退换货</h4>
+                    <ul>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">自助申请退换货</a></li>
+                        <li><a href="#">退换货进度查询</a></li>
+                        <li><a href="#">退款方式和时间</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>商家服务</h4>
+                    <ul>
+                        <li><a href="#">商家中心</a></li>
+                        <li><a href="#">运营服务</a></li>
+                        <li><a href="#">加入尾品汇</a></li>
+                    </ul>
+                </div>
+                <img src="images/logo_00.png" alt="">
+            </div>
+            <div class="smallBottom">
+                <div>
+                    <a href="#">公司简介&emsp;</a>|
+                    <a href="#">&emsp;nvestor Relations&emsp;</a>|
+                    <a href="#">&emsp;网站联盟&emsp;</a>|
+                    <a href="#">&emsp;乐购招商&emsp;</a>|
+                    <a href="#">&emsp;机构销售&emsp;</a>|
+                    <a href="#">&emsp;手机乐购&emsp;</a>|
+                    <a href="#">&emsp;官方Blog&emsp;</a>|
+                    <a href="#">热词搜索</a>
+                </div>
+                <p>Copyright &nbsp;&copy;&nbsp; 乐购网&nbsp; 2004-2016,&nbsp;&nbsp;All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!-- 蒙层 -->
+    <div class="remodal-wrapper remodal-is-closed" style="display: none;">
+        <div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" role="dialog"
+            aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+            <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+            <div>
+                <h2 id="modal1Title">是否去付款中心付款</h2>
+                <p id="modal1Desc">
+                    提示：请确认选中所需商品
+                </p>
+            </div>
+            <br>
+            <button data-remodal-action="cancel" class="remodal-cancel">取消</button>
+            <button data-remodal-action="confirm" class="remodal-confirm">去付款</button>
+
+        </div>
+    </div>
+</body>
+
+</html>

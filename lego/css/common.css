@@ -1,0 +1,145 @@
+/* 查看块级元素大小 */
+ .bccolor{
+     background: red;
+ }
+ /* 显示 */
+.show{
+    display: block;
+}
+/* 隐藏 */
+.hide{
+    display:none;
+}
+/* 版心 */
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 左浮动 */
+.fl{
+    float: left;
+}
+/* 右浮动 */
+.fr{
+    float: right;;
+}
+/* 清除浮动 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 字体大小 */
+.font12{
+    font-size: 12px;
+}
+.font14{
+    font-size: 14px;
+}
+.font16{
+    font-size: 16px;
+}
+.font18{
+    font-size: 18px;
+}
+.font20{
+    font-size: 20px;
+}
+.font22{
+    font-size: 22px;
+}
+.font24{
+    font-size: 24px;
+}
+.font26{
+    font-size: 26px;
+}
+/* 字体颜色 */
+.fontff6{
+    color: #ff6600;
+}
+.fonte6{
+    color: #bfbfbf;
+}
+.fontred{
+    color: red;
+}
+.colf42{
+    color: #f4290d;
+}
+.colb3{
+    color: #b3b3b3;
+}
+.colfff{
+    color: #fff !important;
+}
+.col80{
+    color: #808080;
+}
+.col4d{
+    color: #4d4d4d;
+}
+.col333{
+    color: #333;
+}
+.cola6{
+    color: #a6a6a6;
+}
+.col666{
+    color: #666;
+}
+/* 外边距 */
+.ml14{
+    margin-left: 14px;
+}
+.ml16{
+    margin-left: 16px;
+}
+.mr30{
+    margin-right: 30px;
+}
+.mr28{
+    margin-right: 28px;
+}
+.mr5{
+    margin-right: 5px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt18{
+    margin-top: 18px;
+}
+
+.ml32{
+    margin-left: 32px;
+}
+.mb18{
+    margin-bottom: 18px;
+}
+.mb36{
+    margin-bottom: 36px;
+}
+.mb52{
+    margin-bottom: 52px;
+}
+.mb90{
+    margin-bottom: 80px;    
+}
+.mg14{
+    margin: 14px 0;
+}
+/* 文本居中 */
+.tac{
+    text-align: center;
+}
+/* 背景颜色 */
+.bgcf2{
+    background: #f2f2f2;
+}
+.bgcff{
+    background: #ff6600 !important;
+}
+.active{
+    background: #f2f2f2;
+}

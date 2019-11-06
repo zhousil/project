@@ -1,0 +1,270 @@
+/* 头部 */
+#header {
+    height: 28px;
+    line-height: 28px;
+    background: #000;
+    color: #bfbfbf;
+}
+
+#header>.wrapper>div {
+    float: right;
+}
+
+#header>.wrapper a {
+    color: #ff6600;
+}
+/* 导航栏 */
+#nav{
+    height: 82px;
+    line-height: 82px;   
+}
+#nav p{
+    color: #999;
+    margin-left: 14px;
+}
+#nav ul{
+    margin-right: 126px;  
+    margin-top: 25px;          
+}
+#nav ul li{
+    width: 94px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-left: 46px;
+}
+#nav ul li a{
+    color: #666;
+    text-decoration: none;
+}
+#main .left{
+    width: 310px;
+    height: 1140px;
+    background: #fafafa;
+}
+#main .left .name{
+    margin-top: 24px;
+}
+#main .left .name img{
+    margin-right: 10px;
+}
+#main .left .bag>p{
+    margin: 24px 0;
+    margin-left: 16px;
+}
+#main .left .special>div img{
+    margin-top: 14px;
+}
+#main .left .tac>img{
+    margin-top: 16px;
+}
+#main .right{
+    width: 870px;
+    height: 870px;
+}
+#main .right .listTitle{
+    height: 60px;
+    line-height: 60px;
+    background: #f2f2f2;
+}
+#main .right .listTitle>p{
+    margin-right: 104px;
+}
+#main .right .listTitle ul li{
+    margin-right: 50px;
+}
+#main .right .allOrder>p{
+    margin: 10px 0;
+}
+#main .right .listHead{
+    height: 58px;
+    line-height: 58px;
+}
+#main .right .listHead>input{
+    width: 18px;
+    height: 18px;
+    margin-left: 21px;
+}
+#main .listHead .allChoose{
+    display: inline-block;
+    width: 65px;
+}
+#main .listHead .product{
+    display: inline-block;    
+    width: 314px;
+}
+#main .listHead .single{
+    display: inline-block;    
+    width: 200px;
+    text-align: right;
+}
+#main .listHead .status{
+    display: inline-block;    
+    width: 230px;
+    text-indent: 48px;
+}
+#main .right .orderList ul{
+    border-top: 6px solid #dfdfdf;
+}
+#main .right .orderList ul li{
+    height: 210px;
+    line-height: 108px;
+    border-bottom: 2px solid #e6e6e6;
+    position: relative;
+}
+#main .right .orderList ul li a{
+    text-decoration: underline;
+}
+#main .right .orderList ul li>div{
+    margin-top: 29px;
+}
+#main .right .orderList input{
+    width: 18px;
+    height: 18px;
+    margin-left: 21px;
+    margin-right: 34px;
+    margin-top: 29px;    
+}
+#main .right .orderList img{
+    border: 1px solid #e6e6e6;
+}
+#main .right .orderList .world{
+    margin-left: 28px;
+    margin-right: 212px;
+}
+#main .right .orderList ul .price{
+    margin-right: 118px;
+}
+#main .right .orderList .commend{
+    position: absolute;
+    right: 13px;
+    bottom: -20px;
+}
+/* 结算 */
+#main .totalPrice{
+    height: 58px;
+    line-height: 58px;
+    margin-top: 56px;
+    font-size: 16px;
+    color: #808080;
+}
+#main .totalPrice .content{
+    height: 56px;
+    width: 740px;    
+    border: 1px solid #ccc;
+}
+#main .totalPrice .content input{
+    margin: 0 14px;
+}
+#main .totalPrice .content a{
+    font-size: 16px;
+    color: #808080; 
+}
+#main .totalPrice .content .delete{
+    margin-left: 22px;
+    margin-right: 196px;
+}
+#main .totalPrice .content .allPrice{
+    margin-left: 40px;
+}
+#main .totalPrice .content .price{
+    margin-left: 10px;
+}
+#main .totalPrice button{
+    width: 128px;
+    height: 58px; 
+    color: #fff;   
+    background: #ff6600;
+    border: 0;
+    border-radius: 2px;
+}
+/* 长广告图 */
+#adver{
+    margin-top: 464px;
+}
+/* 页脚 */
+#footer {
+    height: 466px;
+    border-top: 4px solid #ff6600;
+}
+
+#footer>.top {
+    height: 94px;
+    line-height: 94px;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+#footer>.top>img {
+    margin-right: 84px;
+}
+
+#footer>.bottom {
+    height: 336px;
+}
+
+#footer>.bottom>.smallTop {
+    width: 778px;
+    margin: 0 auto;
+    margin-top: 36px;
+    position: relative;
+}
+
+#footer>.bottom>.smallTop>div {
+    float: left;
+    text-align: center;
+}
+
+#footer>.bottom .smallTop>div:first-child {
+    margin-right: 78px;
+}
+
+#footer>.bottom .smallTop>div:nth-child(2) {
+    margin-right: 68px;
+}
+
+#footer>.bottom .smallTop>div:nth-child(3) {
+    margin-right: 50px;
+}
+
+#footer>.bottom .smallTop>div:nth-child(4) {
+    margin-right: 56px;
+}
+
+#footer>.bottom .smallTop>div:last-child {
+    margin-right: 86px;
+}
+
+#footer>.bottom .smallTop>div h4 {
+    font-size: 18px;
+}
+
+#footer>.bottom .smallTop>div li {
+    margin-top: 10px;
+}
+
+#footer>.bottom .smallTop>div a {
+    color: #959595;
+    font-size: 16px;
+}
+
+#footer>.bottom>.smallTop img {
+    position: absolute;
+    right: -162px;
+    top: 32px;
+}
+
+#footer>.bottom .smallBottom {
+    margin-top: 50px;
+    text-align: center;
+    color: #333;
+}
+
+#footer>.bottom .smallBottom>div {
+    margin-bottom: 22px;
+}
+
+#footer>.bottom .smallBottom a {
+    color: #333;
+}
+

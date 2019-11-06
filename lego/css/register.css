@@ -1,0 +1,107 @@
+ /* 头部 */
+ #header{
+    height: 28px;
+    line-height: 28px;
+    background: #000;
+    color: #bfbfbf;
+}
+#header>.wrapper a{
+    color: #ff6600;
+}
+/* 欢迎登录 */
+#welcome{
+    height: 76px;
+    line-height: 76px;
+    border-bottom: 1px solid #e7e7e7;
+}
+#welcome>span:first-child{
+    font-size: 30px;
+    margin: 24px 564px 0 26px;
+}
+/* 主体部分 */
+#main{
+    width: 400px;
+    height: 44px;
+    margin: 0 auto;
+}
+#main>div:nth-child(6){
+    position: relative;
+    line-height: 44px;
+}
+#main>div:not(:nth-child(6)){
+    height: 92px;
+    position: relative;
+    line-height: 44px;
+}
+#main>div:nth-child(7){
+    margin-bottom: -33px;
+}
+#main>div>.text{
+    display: block;
+    width: 400px;
+    height: 44px;
+    text-indent: 130px;
+}
+#main>div label{
+    color: red;
+}
+#main>div>.inpName{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 8px;
+}
+#main .verifyCode{
+    position: relative;
+}
+#main .code{
+    width: 124px;
+    height: 41px;
+    line-height: 41px; 
+    font-size: 28px;   
+    background: #1a83e5;
+    color: #fff;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+#main .getCode{
+    position: relative;
+}
+#main .get{
+    width: 124px;
+    height: 41px;
+    line-height: 41px; 
+    background: #e6e6e6;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    cursor: pointer;
+    border: 0;
+}
+#main .agree input{
+    width: 14px;
+    height: 14px;
+}
+#main  .btn{
+    width: 400px;
+    height: 44px;
+    border: 0;
+    font-size: 26px;
+}
+/* 页脚 */
+#footer .smallBottom {
+    margin-top: 610px;
+    text-align: center;
+    color: #333;
+    padding-top: 24px;
+    border-top: 1px solid #e6e6e6;
+}
+
+#footer .smallBottom>div {
+    margin-bottom: 22px;
+}
+
+#footer .smallBottom a {
+    color: #333;
+}

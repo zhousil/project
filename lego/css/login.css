@@ -1,0 +1,181 @@
+/* 头部 */
+#header {
+    height: 28px;
+    line-height: 28px;
+    background: #000;
+    color: #bfbfbf;
+}
+
+#header>.wrapper>div {
+    float: right;
+}
+
+#header>.wrapper a {
+    color: #ff6600;
+}
+/* 欢迎登录 */
+#welcome{
+    color: #666;
+    font-size: 30px;
+    height: 77px;
+    line-height: 77px;
+    text-indent: 24px;
+}
+/* 主体部分 */
+#main{
+    background:#e93854 url(../images/bg.png) no-repeat center;
+    height: 500px;
+    position: relative;
+}
+#main .card{
+    width: 350px;
+    height: 370px;
+    background: #fff;
+    position: absolute;
+    right: 304px;
+    top: 64px;
+}
+#main .card ul{
+    height: 54px; 
+    border-bottom: 1px solid #f6f6f6;
+}
+#main .card ul li{
+    width: 174px;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    margin-top: 15px;
+}
+#main .card ul li:first-child{
+    width: 173px;
+    border-right: 1px solid #f6f6f6;
+}
+#main .card .cardContent1{
+    height: 315px;
+    width: 291px;
+    margin: 0 auto;
+}
+#main .cardContent1 img{
+    position: relative;
+}
+#main .cardContent1 img:first-child{
+    top: 60px;
+    left: 76px;
+    z-index: 3;
+}
+#main .cardContent1 img:last-child{
+    width: 120px;
+    height: 147px;
+    top: 60px;
+    left: 27px;
+}
+#main .card .cardContent2{
+    height: 315px;
+    width: 291px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/* #main .cardContent2 .admin{
+    position: relative;
+}
+#main .cardContent2 .psd{
+    position: relative;
+} */
+#main .cardContent2 .admin input,
+#main .cardContent2 .psd input{
+    width: 288px;
+    height: 38px;
+    border: 1px solid #bfbfbf;
+    margin-bottom: 30px;
+    text-indent: 46px;
+}
+#main .cardContent2 .delete1{
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    position: absolute;
+    left: 290px;
+    top: 96px;
+}
+#main .cardContent2 .delete2{
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    position: absolute;
+    left: 290px;
+    top: 166px;
+}
+#main .admin .alert{
+    height: 30px;
+    position: absolute;
+    top: 127px;
+}
+#main .psd .alert{
+    height: 30px;
+    position: absolute;
+    top: 196px;
+}
+#main .cardContent2>div>img{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    left: 30px;
+}
+#main .cardContent2 .admin>img:first-of-type{
+    top: 86px;
+}
+#main .cardContent2 .psd>img:first-of-type{
+    top: 156px;
+}
+
+#main .cardContent2 .forget a{
+    color: #000;
+}
+#main .cardContent2 button{
+    width: 290px;
+    height: 40px;
+    background: #ff6600;
+    color: #fff;
+    font-size: 20px;
+    border: 0;
+    margin-top: 20px;
+}
+#main .cardContent2 .bottom{
+    width: 350px;
+    height: 39px;
+    line-height: 39px;
+    margin-top: 26px;
+    margin-left: -29px;
+    border-top: 1px solid #e6e6e6;
+}
+#main .cardContent2 .bottom .inBox{
+    margin-left:126px;
+}
+#main .cardContent2 .bottom img{
+    width: 16px;
+    height: 16px;
+    margin-top: 11px;
+    margin-right: 6px;
+}
+#main .cardContent2 .bottom a{
+    color: #ff6600
+}
+#main .cardTitle .active{
+    color: #ff6600;
+    background: #fff;
+}
+
+/* 页脚部分 */
+#footer>.bottom .smallBottom {
+    margin-top: 50px;
+    text-align: center;
+    color: #333;
+}
+
+#footer>.bottom .smallBottom>div {
+    margin-bottom: 22px;
+}
+
+#footer>.bottom .smallBottom a {
+    color: #333;
+}

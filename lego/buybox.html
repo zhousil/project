@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐购商城</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/buybox.css">
+    <link rel="stylesheet" href="css/remodal.css">
+    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/buybox.js"></script>
+    <script src="js/remodal.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="header">
+        <div class="wrapper clearfix">
+            <img src="images/jiesuan.png" class="fl">
+            <span class="fl">legochina.cn</span>
+            <div class="fr">欢迎光临<a href="index.html" class="fontff6">乐购</a> ，请&nbsp;<a href="login.html" class="fonte6">登录</a>\<a href="register.html"
+                    class="fontff6">注册</a></div>
+        </div>
+    </div>
+    <!-- 搜索框 -->
+    <div id="search" class="wrapper clearfix">
+        <div class="searchBox">
+            <input type="text" placeholder="设计中设计 原研哉">
+            <div class="searchIcon"></div>
+        </div>
+    </div>
+    <!-- 配送地址 -->
+    <div id="address" class="wrapper clearfix">
+        <div class="fr">
+            <span>配送至</span>
+            <select name="address" id="">
+                <option value="成都高新区三环内">成都高新区三环内</option>
+                <option value="成都高新区三环内">成都高新区三环外</option>
+                <option value="成都高新区三环内">成都其他区</option>
+            </select>
+        </div>
+    </div>
+    <!-- 主体部分 -->
+    <div id="lists">
+        <div class="wrapper">
+            <div class="title">
+                <h1 class="font20">填写并核对订单信息</h1>
+                <div class="info">
+                    <input type="checkbox" class="allCheck" checked>
+                    <span class="all">全选</span>
+                    <span class="goods">商品</span>
+                    <span class="single">单价</span>
+                    <span class="num">数量</span>
+                    <span class="small">小计</span>
+                    <span class="opera">操作</span>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product1 clearfix same">
+                    <input class="singleIn fl" type="checkbox" checked>
+                    <div class="img fl">
+                        <img src="images/index08_05.jpg" alt="">
+                    </div>
+                    <span class="name font16 fl">从你的全世界路过</span>
+                    <span class="singlePrice fl">41.00</span>
+                    <div class="changeNum fl clearfix">
+                        <span class="reduce fl">-</span>
+                        <input type="text" value="1" class="number fl">
+                        <span class="add fl">+</span>
+                    </div>
+                    <span class="smallPrice1 fl littlePrice">41.00</span>
+                    <div class="btn fl">
+                        <a href="#" class="delete">删除</a>
+                        <a href="#" class="attention">移到我的关注</a>
+                    </div>
+                </div>
+                <div class="product2 clearfix same">
+                    <input class="singleIn fl" type="checkbox" checked>
+                    <div class="img fl">
+                        <img src="images/index08_05.jpg" alt="">
+                    </div>
+                    <span class="name font16 fl">从你的全世界路过</span>
+                    <span class="singlePrice fl">41.00</span>
+                    <div class="changeNum fl clearfix">
+                        <span class="reduce fl">-</span>
+                        <input type="text" value="1" class="number fl">
+                        <span class="add fl">+</span>
+                    </div>
+                    <span class="smallPrice2 fl littlePrice">41.00</span>
+                    <div class="btn fl">
+                        <a href="#" class="delete">删除</a>
+                        <a href="#" class="attention">移到我的关注</a>
+                    </div>
+                </div>
+            </div>
+            <div class="totalPrice clearfix">
+                <div class="content fl">
+                    <input type="checkbox" class="allCheck" checked>
+                    <a href="#">全选</a>
+                    <a class="delete" href="#">删除选中商品</a>
+                    <span>已选择<span class="proNum fontff6 font22">&emsp;1&emsp;</span>件商品</span>
+                    <span class="allPrice font20">总价<span class="price fontff6">41.00</span></span>
+                </div>
+                <a href="#modal">
+                    <button class="fr font26">去结算</button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 猜你喜欢 -->
+    <div id="guess">
+        <div class="wrapper">
+            <div class="title">
+                <p class="title font24 tac">猜你喜欢</p>
+            </div>
+            <div class="content clearfix">
+                <div class="product fl">
+                    <img src="images/22935553-1_l.jpg" alt="">
+                    <img src="images/index05_18.jpg" alt="">
+                    <p>白夜行&emsp;东野圭吾</p>
+                    <p>
+                        <span class="colf42">推荐：</span>
+                        <span></span>
+                    </p>
+                    <p class="price">
+                        <span class="newPrice font24 colf42">￥:38</span>
+                        <span class="oldPrice font24">￥:58</span>
+                    </p>
+                </div>
+                <div class="product fl">
+                    <img src="images/22935553-1_l.jpg" alt="">
+                    <img src="images/index05_18.jpg" alt="">
+                    <p>白夜行&emsp;东野圭吾</p>
+                    <p>
+                        <span class="colf42">推荐：</span>
+                        <span></span>
+                    </p>
+                    <p class="price">
+                        <span class="newPrice font24 colf42">￥:38</span>
+                        <span class="oldPrice font24">￥:58</span>
+                    </p>
+                </div>
+                <div class="product fl">
+                    <img src="images/22935553-1_l.jpg" alt="">
+                    <img src="images/index05_18.jpg" alt="">
+                    <p>白夜行&emsp;东野圭吾</p>
+                    <p>
+                        <span class="colf42">推荐：</span>
+                        <span></span>
+                    </p>
+                    <p class="price">
+                        <span class="newPrice font24 colf42">￥:38</span>
+                        <span class="oldPrice font24">￥:58</span>
+                    </p>
+                </div>
+                <div class="product fl">
+                    <img src="images/22935553-1_l.jpg" alt="">
+                    <img src="images/index05_18.jpg" alt="">
+                    <p>白夜行&emsp;东野圭吾</p>
+                    <p>
+                        <span class="colf42">推荐：</span>
+                        <span></span>
+                    </p>
+                    <p class="price">
+                        <span class="newPrice font24 colf42">￥:38</span>
+                        <span class="oldPrice font24">￥:58</span>
+                    </p>
+                </div>
+                <div class="product fl">
+                    <img src="images/22935553-1_l.jpg" alt="">
+                    <img src="images/index05_18.jpg" alt="">
+                    <p>白夜行&emsp;东野圭吾</p>
+                    <p>
+                        <span class="colf42">推荐：</span>
+                        <span></span>
+                    </p>
+                    <p class="price">
+                        <span class="newPrice font24 colf42">￥:38</span>
+                        <span class="oldPrice font24">￥:58</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 长广告图 -->
+    <div id="ad" class="tac">
+        <img src="" alt="">
+    </div>
+    <!-- 页脚部分 -->
+    <div id="footer">
+        <div class="top">
+            <img src="images/222_11.png" alt="">
+            <img src="images/222_13(1).png" alt="">
+            <img src="images/222_15.png" alt="">
+            <img src="images/222_17.png" alt="">
+        </div>
+        <div class="bottom">
+            <div class="smallTop clearfix">
+                <div>
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">发票制度</a></li>
+                        <li><a href="#">账户管理</a></li>
+                        <li><a href="#">会员优惠</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>支付方式</h4>
+                    <ul>
+                        <li><a href="#">货到付款</a></li>
+                        <li><a href="#">网上支付</a></li>
+                        <li><a href="#">礼品卡支付</a></li>
+                        <li><a href="#">银行转账</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>订单服务</h4>
+                    <ul>
+                        <li><a href="#">订单配送查询</a></li>
+                        <li><a href="#">订单状态说明</a></li>
+                        <li><a href="#">自助取消订单</a></li>
+                        <li><a href="#">自助修改订单</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>退换货</h4>
+                    <ul>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">自助申请退换货</a></li>
+                        <li><a href="#">退换货进度查询</a></li>
+                        <li><a href="#">退款方式和时间</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>商家服务</h4>
+                    <ul>
+                        <li><a href="#">商家中心</a></li>
+                        <li><a href="#">运营服务</a></li>
+                        <li><a href="#">加入尾品汇</a></li>
+                    </ul>
+                </div>
+                <img src="images/logo_00.png" alt="">
+            </div>
+            <div class="smallBottom">
+                <div>
+                    <a href="#">公司简介&emsp;</a>|
+                    <a href="#">&emsp;nvestor Relations&emsp;</a>|
+                    <a href="#">&emsp;网站联盟&emsp;</a>|
+                    <a href="#">&emsp;乐购招商&emsp;</a>|
+                    <a href="#">&emsp;机构销售&emsp;</a>|
+                    <a href="#">&emsp;手机乐购&emsp;</a>|
+                    <a href="#">&emsp;官方Blog&emsp;</a>|
+                    <a href="#">热词搜索</a>
+                </div>
+                <p>Copyright &nbsp;&copy;&nbsp; 乐购网&nbsp; 2004-2016,&nbsp;&nbsp;All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!-- 蒙层 -->
+    <div class="remodal-wrapper remodal-is-closed" style="display: none;">
+        <div class="remodal remodal-is-initialized remodal-is-closed" data-remodal-id="modal" role="dialog"
+            aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+            <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+            <div>
+                <h2 id="modal1Title">是否去付款中心付款</h2>
+                <p id="modal1Desc">
+                    提示：请确认购物车商品
+                </p>
+            </div>
+            <br>
+            <button data-remodal-action="cancel" class="remodal-cancel">取消</button>
+            <button data-remodal-action="confirm" class="remodal-confirm">去付款</button>
+
+        </div>
+    </div>
+</body>
+
+</html>
