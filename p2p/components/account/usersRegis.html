@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="dist/css/usersRegis.min.css">
+<h3>注册统计</h3>
+<div id="echartsBox" style="width: 100%;height: 500px;margin-top: 20px;"></div>
+<script src="../lib/jquery.min.js"></script>
+<script src="lib/echarts.min.js"></script>
+<script>
+    $.ajax({
+        type:'get',
+        url:'http://172.16.12.254/api/users.php?act=day10',
+        dataType:'json',
+        success:function(data){
+            var arr=data.data;
+            var arr1=[];
+            var arr2=[];
+            for(var i=0;i<arr.length;i++){
+                arr1.push(arr[i].regdate.substr(5));                
+                arr2.push(arr[i].number);
+            }
+                    // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echartsBox'));
+
+// 指定图表的配置项和数据
+var option = {
+    title: {
+        text: '注册用户人数统计'
+    },
+    tooltip: {},
+    legend: {
+        data:['注册人数']
+    },
+    xAxis: {
+        data: arr1
+    },
+    yAxis: {},
+    series: [{
+        name: '注册人数',
+        type: 'bar',
+        data: arr2
+    }]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+            
+        }
+    })
+
+</script>

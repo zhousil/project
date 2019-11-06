@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="../dist/css/register.min.css">
+<div class="main">
+        <div class="img">
+            <img src="assets/img/regist.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="left col-lg-7">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputName2">* 用户名：</label>
+                        <input type="text" name="username" class="form-control username" id="exampleInputName2"
+                            placeholder="字母开头，允许5-16字节，允许字母数字下划线">
+                            <span class="glyphicon glyphicon-remove hide"></span>                                
+                            <div class="text"></div>   
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName2">* 密　码：</label>
+                        <input type="password" name="pwd" class="form-control pwd" id="exampleInputName2"
+                            placeholder="字母开头，长度6~18，只能包含字母、数字和下划线">
+                            <span class="glyphicon glyphicon-remove hide"></span>                                
+                            <div class="text"></div>   
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName2">* 确　认：</label>
+                        <input type="password" class="form-control pwd2" id="exampleInputName2"
+                            placeholder="与密码一致">
+                            <span class="glyphicon glyphicon-remove hide"></span>                                
+                            <div class="text"></div>   
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName2">* 推荐码：</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                            否
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 是
+                        </label>
+                    </div>
+                    <div class="read">
+                        <input type="checkbox">
+                        我已经阅读并同意《服务协议》和 《隐私条款》
+                    </div>
+                    <div class="nextPage">
+                        <a href="#" class="next" id="next">下一步</a>
+                        <span>已有账号？</span>
+                        <a href="#login" class="login">[立即登录]</a>
+                    </div>
+                </form>
+            </div>
+            <div class="right col-lg-5">
+                <img src="assets/img/hongbao.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="dist/js/register.min.js"></script>    
+    <script>
+        $("#next").on("click",function(){
+            for(var i in result){
+                if(result[i]==false){  
+                    alert(i+"有误");                                            
+                    return false;
+                }
+            }
+            var username=$(".username").val();
+            var pwd=$(".pwd").val();
+            $.ajax({
+                type:"post",
+                url:'http://172.16.12.254/api/users.php?act=create',
+                data:{"username":username,"pwd":pwd},
+                dataType:'json',
+                success:function(data){
+                    if(data.errcode==0){
+                        alert('恭喜你，注册成功！');
+                        location.href="#login";
+                    }else if(data.errcode==1004){
+                        alert('用户名已存在，请更换用户名')
+                        location.href="#register";                        
+                    }else{
+                        alert('注册失败，请重试');
+                        location.href="#register";                                                
+                    }
+                }
+            });
+        });
+    </script>

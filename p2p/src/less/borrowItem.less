@@ -1,0 +1,46 @@
+h3{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: -2px;        
+}
+table thead{
+    font-size: 18px;
+    font-weight: bold;
+}
+table tbody{
+    tr{
+        height: 40px;
+        td{
+            line-height: 2.4 !important;
+            a{
+                color: #369;
+                font-weight: bold;
+                &:hover{
+                    color: #aaa;
+                }
+            }
+        }
+        td:nth-child(3){
+            font-size: 20px;
+            color: #f60;
+            text-indent: 20px;
+        }
+        td:not(:nth-child(3)){
+            line-height: 3.4 !important;
+        }
+        td:last-child{
+            font-weight: bold;
+        }
+    }
+    .wait{
+        color: #aaa;
+    }
+    .ing,.not,.return{
+        color: rgb(13, 165, 13);
+    }
+
+    .refuse{
+        color: #f00;
+    }
+} 

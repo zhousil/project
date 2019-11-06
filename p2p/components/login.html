@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="../dist/css/login.min.css">
+<div class="main">
+        <div class="card">
+                <div class="title">
+                    <a href="#">用户登录</a>
+                    <a href="#">扫码登录</a>
+                    <img src="assets/img/erweima.png" alt="">
+                </div>
+                <form>
+                    <div class="username">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <input type="text" placeholder="请输入用户名/手机号" id="username">
+                        <span class="glyphicon glyphicon-remove hide"></span>
+                        <div class="text"></div>
+                    </div>
+                    <div class="pwd">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            <input type="password" placeholder="请输入密码" id="pwd">
+                            <span class="glyphicon glyphicon-remove hide"></span>                                
+                            <div class="text"></div>                                
+                        </div>
+                        <div class="btnLogin">
+                        <a href="#" id="login">立即登录</a>                                
+                        </div>
+                        <div class="reme">
+                            <input type="checkbox">
+                            记住账号
+                            <a href="#">忘记密码？</a>
+                        </div>
+                        <p>没有账号？
+                            <a href="register.html">免费注册</a>
+                        </p>
+                        <div class="qq">
+                            <img src="assets/img/qq.png" alt="">
+                            <a href="#">QQ登录</a>
+                            <img src="assets/img/weibo.png" alt="">                                
+                            <a href="#">微博登录</a>
+                        </div>
+                </form>
+        </div>
+    </div>
+    <script src="dist/js/login.min.js"></script>        
+    <script>
+            $("#login").on("click",function(){
+                var username=$("#username").val();
+                var pwd=$("#pwd").val();
+                $.ajax({
+                    type:'post',
+                    url:' http://172.16.12.254/api/users.php?act=login',
+                    data:{"username":username,"pwd":pwd},
+                    dataType:'json',
+                    success:function(a){
+                        if(a.errcode==0){
+                            alert('登录成功！');
+                            sessionStorage.setItem('username',JSON.stringify(a.data.username));
+                            localStorage.setItem('userdata', JSON.stringify(a.data) );
+                            location.href='index.html';
+                                                    
+                        }else{
+                            alert('网络不好，请重试');
+                        }
+                    }
+                })
+            })
+            // $("#username").on("blur",function(){
+            //     var username=$("#username").val();
+            //     $.ajax({
+            //         type:'post',
+            //         url:' http://172.16.12.254/api/users.php?act=check&username='+username,
+            //         data:{"username":username},
+            //         dataType:'json',
+            //         success:function(data){
+            //             if(data.errcode==0){
+            //                 alert('登录成功！');                            
+            //             }else{
+            //                 alert('用户名不存在，请注册');                            
+            //             }
+            //         }
+            //     })
+            // })
+        </script>

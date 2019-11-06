@@ -1,0 +1,189 @@
+<link rel="stylesheet" href="../dist/css/borrownum.min.css">
+<div class="container main">
+        <div class="title">
+                <a href="index.html" class="btn"><&emsp;返回</a>                   
+                 <a href="#">我要借款&emsp;</a> >
+                    <a href="#">&emsp;借款信息</a>
+        </div>
+        <div class="content">
+                <div class="colorBox">
+                    <p>信用借款</p>
+                    <p>
+                        <span>授信额度：<span>2000&emsp;</span></span>
+                        <span>可借金额：<span>2000</span></span>
+                    </p>
+                </div>
+                <div class="bottom">
+                    <h3>借款信息
+                        <span>信用标</span>
+                    </h3>
+                    <div class="inBottom">
+                        <form>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款金额</span>
+                                <div class="input-group col-lg-8">
+                                    <input id="borrowmoney" type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">元</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款利息</span>
+                                <div class="input-group col-lg-8">
+                                    <input  id="rate" value="10" type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">%</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款期限</span>
+                                <div class="input-group col-lg-8">
+                                    <select class="form-control"  id="borrowtime">
+                                        <option value="1">1</option>
+                                        <option value="3">3</option>
+                                        <option value="6">6</option>
+                                        <option value="9">9</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <span class="input-group-addon" id="basic-addon2">元</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                    <span class="col-lg-4">还款方式</span>
+                                    <div class="input-group col-lg-8">
+                                        <input name="repaytype" type="radio" class="repaytype" value="0" checked> 按月分期&emsp;
+                                        <input name="repaytype" type="radio" class="repaytype" value="1"> 按月到期
+                                    </div>
+                                </div>
+                                <div class="inputBox">
+                                        <span class="col-lg-4">最小投标</span>
+                                        <div class="input-group col-lg-8">
+                                            <input id="minbid" type="text" class="form-control" aria-describedby="basic-addon2">
+                                            <span class="input-group-addon" id="basic-addon2">元</span>
+                                        </div>
+                                    </div>
+                                    <div class="inputBox">
+                                            <span class="col-lg-4">投标奖金</span>
+                                            <div class="input-group col-lg-8">
+                                                <input id="RewardAmount" name="totalRewardAmount" value="0" type="text" class="form-control" aria-describedby="basic-addon2">
+                                                <span class="input-group-addon" id="basic-addon2">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="inputBox">
+                                                <span class="col-lg-4">招标天数</span>
+                                                <div class="input-group col-lg-8">
+                                                    <select id="days" class="form-control" name="disableDays">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                    <span class="input-group-addon" id="basic-addon2">天</span>
+                                                </div>
+                                            </div>
+                                            <div class="inputBox long">
+                                                <span class="col-lg-4">借款标题</span>
+                                                <div class="input-group col-lg-8">
+                                                    <input id="title" type="text" class="form-control" aria-describedby="basic-addon2">
+                                                </div>
+                                            </div>
+                                            <div class="inputBox high">
+                                                <span class="col-lg-4">借款描述</span>
+                                                <div class="input-group col-lg-8">
+                                                        <textarea id="info" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div id="btn" class="btn">
+                                                <a href="#" class="btn btn-primary btn-lg disabled" role="button">提交申请</a>
+                                            </div>
+                        </form>
+                        <div class="skyBox">
+                            <h3>相关费用</h3>
+                            <p><span>利息</span> 
+                                <span class="el-borrow-cost" id="cost01"> --</span>
+                            </p>
+                            <p><span>奖金</span>
+                                <span class="el-borrow-cost" id="cost02"> --</span>
+                            </p>
+                            <p><span>管理费</span>
+                                <span class="el-borrow-cost" id="cost03"> --</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+            function compute(){
+                var borrowmoney=parseInt( $('#borrowmoney').val() );           
+                var rate=parseInt( $('#rate').val() );
+                var borrowtime=parseInt( $('#borrowtime').val() );   
+                var RewardAmount=parseFloat( $('#RewardAmount').val() );
+                var result1=borrowmoney*(rate/100)/12*borrowtime;
+                var result2=borrowmoney*RewardAmount;      
+                $('#cost01').html( result1.toFixed(2) );
+                $('#cost02').html( result2.toFixed(2) );
+            }
+            function manage(){
+                var borrowmoney=parseInt( $('#borrowmoney').val() );           
+                var rate=parseInt( $('#rate').val() );
+                var borrowtime=parseInt( $('#borrowtime').val() );   
+                var RewardAmount=parseFloat( $('#RewardAmount').val() );
+                var result1=borrowmoney*(rate/100)/12*borrowtime;
+                var result2=borrowmoney*RewardAmount;      
+                var result3=0;
+                if(borrowmoney<=1000){
+                    result3=50;
+                }else if(borrowmoney>1000&&borrowmoney<=5000){
+                    result3=80;
+                }else if(borrowmoney>5000&&borrowmoney<=10000){
+                    result3=100;
+                }else{
+                    result3=160;
+                }
+                $('#cost01').html( result1.toFixed(2) );
+                $('#cost02').html( result2.toFixed(2) );
+                $('#cost03').html( result3.toFixed(2) );
+                
+            }
+            
+            //三个输入框绑定同一个事件处理函数
+            $('#borrowmoney').on('change', manage);
+            $('#rate').on('change', compute);
+            $('#borrowtime').on('change', compute);
+            $('#RewardAmount').on('change', compute);
+            $("#btn").on('click',function(){
+                var numId=JSON.parse(localStorage.getItem('userdata'));
+                var borrowmoney=parseInt( $('#borrowmoney').val() );
+                var rate=parseInt( $('#rate').val() );
+                var borrowtime=parseInt( $('#borrowtime').val() );
+                var RewardAmount=parseFloat( $('#RewardAmount').val() );
+                var repaytype=parseInt( $('.repaytype:checked').val());
+                console.log(repaytype);
+                var minbid=parseInt( $('#minbid').val());
+                var days=parseInt( $('#days').val());
+                var title=$('#title').val();
+                var info=$('#info').val();
+                $.ajax({
+                type:'post',
+                url:'http://172.16.12.254/api/borrow.php?act=apply',
+                data:{"userid":numId.id,"borrowmoney":borrowmoney,"interest":rate,"borrowtime":borrowtime,"repaytype":repaytype,"minbid":minbid,"days":days,"title":title,"info":info},
+                dataType:'json',
+                success:function(data){
+                    if(data.errcode==0){
+                        alert("申请成功！");
+                        location.href='#invest';
+                    }else{
+                        alert("网络不好，请重试")
+                    }
+                }
+            })
+            })
+    
+    
+        </script>

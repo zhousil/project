@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/borrownum.min.css">
+</head>
+
+<body>
+    <!-- 页头部分 -->
+    <div id="header" class="container-fluid topNav">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-earphone"></span>
+                            客服热线：028-86261949</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">手机APP <span class="sr-only">(current)</span></a></li>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">风险提示</a></li>
+                            <li><a href="#">邀请好友</a></li>
+                            <li><a href="#">新手指引</a></li>
+                            <li><a href="#">帮助</a></li>
+                            <li><a href="register.html" class="orange">免费注册</a></li>
+                            <li><a href="login.html" class="orange">立即登录</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid bottomNav">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="index.html#invest">我要投资</a></li>
+                        <li><a href="index.html#borrow">我要借款</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">信息披露<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">关于我们</a></li>
+                                <li><a href="#">机构信息</a></li>
+                                <li><a href="#">运营数据</a></li>
+                                <li><a href="#">运营报告</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html#account">我的账户</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="container main">
+        <div class="title">
+                <a href="index.html" class="btn"><&emsp;返回</a>                   
+                 <a href="#">我要借款&emsp;</a> >
+                    <a href="#">&emsp;借款信息</a>
+        </div>
+        <div class="content">
+                <div class="colorBox">
+                    <p>信用借款</p>
+                    <p>
+                        <span>授信额度：<span>2000&emsp;</span></span>
+                        <span>可借金额：<span>2000</span></span>
+                    </p>
+                </div>
+                <div class="bottom">
+                    <h3>借款信息
+                        <span>信用标</span>
+                    </h3>
+                    <div class="inBottom">
+                        <form>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款金额</span>
+                                <div class="input-group col-lg-8">
+                                    <input id="borrowmoney" type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">元</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款利息</span>
+                                <div class="input-group col-lg-8">
+                                    <input  id="rate" value="10" type="text" class="form-control" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2">%</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <span class="col-lg-4">借款期限</span>
+                                <div class="input-group col-lg-8">
+                                    <select class="form-control"  id="borrowtime">
+                                        <option value="1">1</option>
+                                        <option value="3">3</option>
+                                        <option value="6">6</option>
+                                        <option value="9">9</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                    <span class="input-group-addon" id="basic-addon2">元</span>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                    <span class="col-lg-4">还款方式</span>
+                                    <div class="input-group col-lg-8">
+                                        <input name="repaytype" type="radio" class="repaytype" value="0" checked> 按月分期&emsp;
+                                        <input name="repaytype" type="radio" class="repaytype" value="1"> 按月到期
+                                    </div>
+                                </div>
+                                <div class="inputBox">
+                                        <span class="col-lg-4">最小投标</span>
+                                        <div class="input-group col-lg-8">
+                                            <input id="minbid" type="text" class="form-control" aria-describedby="basic-addon2">
+                                            <span class="input-group-addon" id="basic-addon2">元</span>
+                                        </div>
+                                    </div>
+                                    <div class="inputBox">
+                                            <span class="col-lg-4">投标奖金</span>
+                                            <div class="input-group col-lg-8">
+                                                <input id="RewardAmount" name="totalRewardAmount" value="0" type="text" class="form-control" aria-describedby="basic-addon2">
+                                                <span class="input-group-addon" id="basic-addon2">%</span>
+                                            </div>
+                                        </div>
+                                        <div class="inputBox">
+                                                <span class="col-lg-4">招标天数</span>
+                                                <div class="input-group col-lg-8">
+                                                    <select id="days" class="form-control" name="disableDays">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                    <span class="input-group-addon" id="basic-addon2">天</span>
+                                                </div>
+                                            </div>
+                                            <div class="inputBox long">
+                                                <span class="col-lg-4">借款标题</span>
+                                                <div class="input-group col-lg-8">
+                                                    <input id="title" type="text" class="form-control" aria-describedby="basic-addon2">
+                                                </div>
+                                            </div>
+                                            <div class="inputBox high">
+                                                <span class="col-lg-4">借款描述</span>
+                                                <div class="input-group col-lg-8">
+                                                        <textarea id="info" class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div id="btn" class="btn">
+                                                <a href="#" class="btn btn-primary btn-lg disabled" role="button">提交申请</a>
+                                            </div>
+                        </form>
+                        <div class="skyBox">
+                            <h3>相关费用</h3>
+                            <p><span>利息</span> 
+                                <span class="el-borrow-cost" id="cost01"> --</span>
+                            </p>
+                            <p><span>奖金</span>
+                                <span class="el-borrow-cost" id="cost02"> --</span>
+                            </p>
+                            <p><span>管理费</span>
+                                <span class="el-borrow-cost" id="cost03"> --</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="container top">
+            <div class="icon">
+                <img src="assets/img/weibo_hover.png" alt="">
+                <img src="assets/img/wechat_hover.png" alt="">
+                <img src="assets/img/ios_hover.png" alt="">
+                <img src="assets/img/android_hover.png" alt="">
+            </div>
+            <div class="link">
+                <a href="#">关于我们</a>
+                <a href="#">联系我们</a>
+                <a href="#">安全保障</a>
+                <a href="#">帮助中心</a>
+                <a href="#">媒体报道</a>
+                <a href="#">行业动态</a>
+                <a href="#">网站地图</a>
+                <a href="#">触屏版</a>
+            </div>
+            <p>4000-585-666 （周一至周五：08：30-22：00　周末：9：30-21：00）kefy@dib666.com</p>
+        </div>
+        <div class="container bottom">
+            <div class="img">
+                <img src="assets/img/2_hover.jpg" alt="">
+                <img src="assets/img/3_hover.jpg" alt="">
+                <img src="assets/img/4_hover.jpg" alt="">
+                <img src="assets/img/5_hover.jpg" alt="">
+            </div>
+            <p>版权所有©深圳地标金融服务有限公司　备案号：粤ICP备13075570号-1</p>
+            <p>友情链接：
+                <a href="#">网贷平台</a>
+                <a href="#">个人所得税计算器</a>
+                <a href="#">p2p投资理财</a>
+                <a href="#">网贷东方</a>
+                <a href="#">贷款</a>
+                <a href="#">信托理财</a>
+                <a href="#">信用贷款</a>
+                <a href="#">投资者说</a>
+                <a href="#">铜掌柜</a>
+                <a href="#">贷款</a>
+                <a href="#">私募基金</a>
+            </p>
+        </div>
+    </div>
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        function compute(){
+            var borrowmoney=parseInt( $('#borrowmoney').val() );           
+            var rate=parseInt( $('#rate').val() );
+            var borrowtime=parseInt( $('#borrowtime').val() );   
+            var RewardAmount=parseFloat( $('#RewardAmount').val() );
+            var result1=borrowmoney*(rate/100)/12*borrowtime;
+            var result2=borrowmoney*RewardAmount;      
+            $('#cost01').html( result1.toFixed(2) );
+            $('#cost02').html( result2.toFixed(2) );
+        }
+        function manage(){
+            var borrowmoney=parseInt( $('#borrowmoney').val() );           
+            var rate=parseInt( $('#rate').val() );
+            var borrowtime=parseInt( $('#borrowtime').val() );   
+            var RewardAmount=parseFloat( $('#RewardAmount').val() );
+            var result1=borrowmoney*(rate/100)/12*borrowtime;
+            var result2=borrowmoney*RewardAmount;      
+            var result3=0;
+            if(borrowmoney<=1000){
+                result3=50;
+            }else if(borrowmoney>1000&&borrowmoney<=5000){
+                result3=80;
+            }else if(borrowmoney>5000&&borrowmoney<=10000){
+                result3=100;
+            }else{
+                result3=160;
+            }
+            $('#cost01').html( result1.toFixed(2) );
+            $('#cost02').html( result2.toFixed(2) );
+            $('#cost03').html( result3.toFixed(2) );
+            
+        }
+        
+        //三个输入框绑定同一个事件处理函数
+        $('#borrowmoney').on('change', manage);
+        $('#rate').on('change', compute);
+        $('#borrowtime').on('change', compute);
+        $('#RewardAmount').on('change', compute);
+        $("#btn").on('click',function(){
+            var numId=JSON.parse(localStorage.getItem('userdata'));
+            var borrowmoney=parseInt( $('#borrowmoney').val() );
+            var rate=parseInt( $('#rate').val() );
+            var borrowtime=parseInt( $('#borrowtime').val() );
+            var RewardAmount=parseFloat( $('#RewardAmount').val() );
+            var repaytype=parseInt( $('.repaytype:checked').val());
+            console.log(repaytype);
+            var minbid=parseInt( $('#minbid').val());
+            var days=parseInt( $('#days').val());
+            var title=$('#title').val();
+            var info=$('#info').val();
+            $.ajax({
+            type:'post',
+            url:'http://172.16.12.254/api/borrow.php?act=apply',
+            data:{"userid":numId.id,"borrowmoney":borrowmoney,"interest":rate,"borrowtime":borrowtime,"repaytype":repaytype,"minbid":minbid,"days":days,"title":title,"info":info},
+            dataType:'json',
+            success:function(data){
+                if(data.errcode==0){
+                    alert("申请成功！");
+                    location.href='#account/borrowItem';
+                }else{
+                    alert("网络不好，请重试")
+                }
+            }
+        })
+        })
+
+
+    </script>
+</body>
+
+</html>

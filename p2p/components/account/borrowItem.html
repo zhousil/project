@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="dist/css/borrowItem.min.css">
+<h3>借钱项目</h3>
+<table class="table table-striped">
+        <thead>
+            <tr>					
+              <td>标题</td>
+              <td>时间</td>
+              <td>借款金额(元)</td>
+              <td>期限</td>
+              <td>利率</td>
+              <td>状态</td>  
+            </tr>
+        </thead>
+        <tbody id="table">
+            <!-- <tr>			
+                <td>
+                    <a href="#">江湖救急</a>
+                </td>
+                <td>2016-01-02</td>
+                <td>2000</td>
+                <td>12月</td>
+                <td>12%</td>
+                <td class="wait">待发布</td>
+            </tr> -->
+            <tr>			
+                    <td>
+                        <a href="#">急需用钱</a>
+                    </td>
+                    <td>2016-11-02</td>
+                    <td>2000</td>
+                    <td>12月</td>
+                    <td>12%</td>
+                    <td class="ing">招标中</td>
+                </tr>
+                <!-- <tr>			
+                        <td>
+                            <a href="#">买房贷款</a>
+                        </td>
+                        <td>2017-05-14</td>
+                        <td>10000</td>
+                        <td>12月</td>
+                        <td>12%</td>
+                        <td class="not">满标未审核</td>
+                    </tr>
+                    <tr>			
+                            <td>
+                                <a href="#">加紧审核</a>
+                            </td>
+                            <td>2017-08-14</td>
+                            <td>5000</td>
+                            <td>12月</td>
+                            <td>12%</td>
+                            <td class="return">还款中</td>
+                        </tr>
+                        <tr>			
+                                <td>
+                                    <a href="#">快点把钱借给我</a>
+                                </td>
+                                <td>2018-06-18</td>
+                                <td>3000</td>
+                                <td>12月</td>
+                                <td>12%</td>
+                                <td class="refuse">招标拒绝</td>
+                            </tr> -->
+        </tbody>
+      </table>
+      <script>
+        var numid=JSON.parse(localStorage.getItem('userdata'));          
+        $.ajax({
+        type:'get',
+        url:'http://172.16.12.254/api/borrow.php?act=readOne&id='+numid.id,         
+        dataType:'json',
+        success:function(data){
+            var arr=data;
+            console.log(arr);
+            var html='';            
+            for(var i=0;i<arr.length;i++){
+                html+='<tr>';
+                html+='<td><a href="#">'+arr[i].title+'</a></td>';
+                html+='<td><'+arr[i].time+'</td>';
+                html+='<td>'+arr[i].borrowmoney+'元</td>';
+                html+='<td>'+arr[i].days+'月</td>';
+                html+='<td class="percent"><span>'+arr[i].interest.substring(0,2)+'</span>%</td>';                
+                html+='<td class="ing">招标中</td>';
+                html+='</tr>';
+            }
+            $("#table").append(html);
+        }
+    })
+</script>

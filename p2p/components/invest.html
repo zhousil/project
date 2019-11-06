@@ -1,0 +1,115 @@
+<link rel="stylesheet" href="./dist/css/invest.min.css">  
+  <!-- 主体部分 -->
+    <div class="container-fluid main">
+            <div class="container box">
+                <div class="title">
+                    <a href="#index" class="btn"><&emsp;返回</a>
+                    <a href="#">我要投资&emsp;</a> >
+                    <a href="#">&emsp;投资列表</a>
+                </div>
+                <div class="tab1">
+                        <ul class="nav nav-tabs">
+                                <li role="presentation" class="active"><a href="#">投资列表</a></li>
+                                <li role="presentation"><a href="#">债权转让</a></li>
+                              </ul>
+                </div>
+                <p class="tab2">还款方式：
+                    <a href="#">全部</a>
+                    <a href="#">等额本息</a>
+                    <a href="#">按月付息到期还本</a>
+                    <a href="#">一次性还款</a>
+                    <a href="#">等额本金</a>
+                    <a href="#">等本等息</a>
+                </p>
+                <p class="tab2">借款期限：
+                    <a href="#">全部</a>
+                    <a href="#">1个月以下</a>
+                    <a href="#">1~3个月</a>
+                    <a href="#">4~6个月</a>
+                    <a href="#">7~12个月</a>
+                    <a href="#">12个月以上</a>
+                </p>
+                <p class="tip">
+                   <img src="assets/img/notice.png" alt="">
+                   <span>温馨提示：项目预计发布时间 <span>10:30</span> 、<span>15:30</span> ， 其它时间随机发布</span>
+                </p>
+                <table class="table" id="table">
+                        <tr>
+                            <td>借款人</td>                            
+                            <td>借款名称</td>
+                            <td>历史年利率</td>
+                            <td>借款金额</td>
+                            <td>借款期限</td>
+                            <td>还款方式</td>
+                            <td>借款进度</td>
+                            <td>操作</td>
+                        </tr>
+                        <!-- <tr>
+                                <td>张三</td>                            
+                                <td>股票质押DIB201910210003</td>
+                                <td class="percent"><span>12.00</span>%</td>
+                                <td class="money"><span>1,000,000</span> 元</td>
+                                <td class="time"><span>6</span>个月</td>
+                                <td>一次性还款</td>
+                                <td>98%</td>
+                                <td>
+                                    <a href="borrowInfo.html">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>李四</td>                            
+                                    <td>股票质押DIB201910210003</td>
+                                    <td class="percent"><span>12.00</span>%</td>
+                                    <td class="money"><span>1,000,000</span> 元</td>
+                                    <td class="time"><span>1</span>个月</td>
+                                    <td>一次性还款</td>
+                                    <td>16%</td>
+                                    <td>
+                                        <a href="borrowInfo.html">查看</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td>王五</td>                            
+                                        <td>股票质押DIB201910210003</td>
+                                        <td class="percent"><span>12.00</span>%</td>
+                                        <td class="money"><span>1,000,000</span> 元</td>
+                                        <td class="time"><span>6</span>个月</td>
+                                        <td>一次性还款</td>
+                                        <td>56%</td>
+                                        <td>
+                                            <a href="borrowInfo.html" id="look">查看</a>
+                                        </td>
+                                    </tr> -->
+                      </table>
+            </div>
+    </div>
+    <script>
+            $.ajax({
+            type:'get',
+            url:'http://172.16.12.254/api/borrow.php?act=readAll',
+            dataType:'json',
+            success:function(data){
+                var arr=data.data;
+                var html='';    
+                var method='';            
+                for(var i=0;i<arr.length;i++){
+                    if(arr[i].repaytype==0){
+                        method="按月分期";
+                    }else{
+                        method="按月到期";                        
+                    }
+                    html+='<tr>';
+                    html+='<td>'+arr[i].userid+'</td>';
+                    html+='<td>'+arr[i].title+'</td>';
+                    html+='<td class="percent"><span>'+arr[i].interest.substring(0,4)+'</span>%</td>';
+                    html+='<td class="money"><span>'+arr[i].borrowmoney+'</span>元</td>';
+                    html+='<td class="time"><span>'+arr[i].days+'</span>个月</td>';
+                    html+='<td>'+method+'</td>';
+                    html+='<td>96%</td>';
+                    html+='<td><a href="#borrowInfo">查看</a></td>';
+                    html+='</tr>';
+                }
+                $("#table").append(html);
+            }
+        })
+    </script>
