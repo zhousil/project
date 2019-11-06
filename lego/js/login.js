@@ -15,16 +15,22 @@ $(function(){
     })
     // 正则判断格式
     $("#main .cardContent .cardContent2 input").blur(function(){
-        let val = $(this).val();
-        let reg = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
-        let res=reg.test(val);
-        if(res){
-            $(this).siblings(".alert").html("格式正确！" )
-            $(this).siblings(".alert").css("color","green");          
+        if($(this).val()==''){
+            $(this).siblings(".alert").html("此项不能为空 !" );  
+            $(this).siblings(".alert").css("color","red");            
         }else{
-            $(this).siblings(".alert").html("格式错误！" )  
-            $(this).siblings(".alert").css("color","red");                               
+            let val = $(this).val();
+            let reg = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
+            let res=reg.test(val);
+            if(res){
+                $(this).siblings(".alert").html("格式正确！" )
+                $(this).siblings(".alert").css("color","green");          
+            }else{
+                $(this).siblings(".alert").html("格式错误！" )  
+                $(this).siblings(".alert").css("color","red");                               
+            }
         }
+
     })
     // 输入后x才显示出来
     $("#main .cardContent .cardContent2 input").keyup(function(){
@@ -38,5 +44,7 @@ $(function(){
     // 点击x清空内容
     $("#main .cardContent .cardContent2 .delete").click(function(){
         $(this).prev().prop("value","");
+        $(this).hide();
+        $(this).next().html(' ');
     })
 })
